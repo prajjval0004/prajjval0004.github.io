@@ -1554,3 +1554,88 @@ body {
     top: 68px;
   }
 }
+/* Step 43: Premium hero profile area */
+
+.hero {
+  gap: 64px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-image-card {
+  transform: translateY(0);
+  animation: floatCard 4.5s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.profile-image-wrap {
+  position: relative;
+  box-shadow:
+    0 0 0 10px rgba(37, 99, 235, 0.06),
+    0 0 40px rgba(37, 99, 235, 0.22);
+}
+
+.profile-image-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent), var(--cyan));
+  z-index: -1;
+  filter: blur(14px);
+  opacity: 0.45;
+}
+
+.hero-image-card h3 {
+  font-size: 30px;
+  letter-spacing: -0.03em;
+}
+
+.profile-status {
+  background: linear-gradient(135deg, #dcfce7, #ecfeff);
+  border: 1px solid rgba(22, 101, 52, 0.16);
+  box-shadow: 0 8px 18px rgba(22, 101, 52, 0.08);
+}
+
+.hero-highlights {
+  max-width: 680px;
+}
+
+.hero-highlights span {
+  transition: 0.22s ease;
+}
+
+.hero-highlights span:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #eff6ff, #f5f3ff);
+}
+
+.social-icons a {
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+}
+
+.social-icons a:hover {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+@media (max-width: 900px) {
+  .hero {
+    gap: 36px;
+  }
+
+  .hero-image-card {
+    animation: none;
+  }
+}
