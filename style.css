@@ -1395,3 +1395,162 @@ body {
     font-size: 30px;
   }
 }
+/* Step 42: Premium navbar upgrade */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+}
+
+.navbar {
+  max-width: 1360px;
+  padding: 14px 24px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo::before {
+  content: "PG";
+  height: 38px;
+  width: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  font-size: 14px;
+  font-weight: 900;
+  -webkit-text-fill-color: white;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.28);
+}
+
+.nav-links {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  border-radius: 999px;
+  padding: 8px;
+  gap: 4px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.nav-links a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 11px;
+  border-radius: 999px;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 750;
+  transition: 0.22s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+  background: #eff6ff;
+}
+
+.nav-links a.current {
+  color: white;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.22);
+}
+
+.nav-links a.current::after {
+  display: none;
+}
+
+.resume-btn {
+  background: linear-gradient(135deg, var(--primary), var(--accent)) !important;
+  color: white !important;
+  padding: 8px 14px !important;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.22);
+}
+
+.resume-btn:hover {
+  background: linear-gradient(135deg, var(--primary-dark), var(--accent)) !important;
+  color: white !important;
+}
+
+/* Use hamburger earlier because navbar has many links */
+@media (max-width: 1280px) {
+  .menu-btn {
+    display: grid;
+    place-items: center;
+    height: 44px;
+    width: 44px;
+    border-radius: 14px;
+    background: white;
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 76px;
+    right: 22px;
+    width: min(340px, calc(100vw - 44px));
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(226, 232, 240, 0.95);
+    border-radius: 24px;
+    padding: 16px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    box-shadow: 0 24px 55px rgba(15, 23, 42, 0.14);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    justify-content: flex-start;
+    width: 100%;
+    padding: 11px 14px;
+    font-size: 15px;
+  }
+
+  .resume-btn {
+    justify-content: center !important;
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: 520px) {
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .logo::before {
+    height: 34px;
+    width: 34px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+
+  .nav-links {
+    right: 16px;
+    top: 68px;
+  }
+}
