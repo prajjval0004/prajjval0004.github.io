@@ -52,3 +52,26 @@ const revealObserver = new IntersectionObserver(
 revealElements.forEach((element) => {
   revealObserver.observe(element);
 });
+const sections = document.querySelectorAll("section[id]");
+const navItems = document.querySelectorAll('.nav-links a[href^="#"]');
+
+window.addEventListener("scroll", () => {
+  let currentSection = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 120;
+    const sectionHeight = section.offsetHeight;
+
+    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+      currentSection = section.getAttribute("id");
+    }
+  });
+
+  navItems.forEach((link) => {
+    link.classList.remove("current");
+
+    if (link.getAttribute("href") === `#${currentSection}`) {
+      link.classList.add("current");
+    }
+  });
+});

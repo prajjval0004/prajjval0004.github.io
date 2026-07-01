@@ -942,3 +942,31 @@ a {
   opacity: 1;
   transform: translateY(0);
 }
+/* Active navbar link */
+.nav-links a.current {
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.nav-links a.current::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: var(--primary);
+  border-radius: 999px;
+  margin-top: 4px;
+}
+
+/* Justify main content text */
+.hero-text,
+.section-text p,
+.card p:not(.place),
+.timeline-item p:not(.place),
+.publication p,
+.research-card p,
+.project-card p,
+.workshop-card p {
+  text-align: justify;
+  text-justify: inter-word;
+}
