@@ -446,3 +446,19 @@ a {
 .experience-list li {
   margin-bottom: 12px;
 }
+.date-badge {
+  display: inline-block;
+  background: #eff6ff;
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 13px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.card h4 {
+  margin: 14px 0 8px;
+  color: #334155;
+  font-size: 16px;
+}
