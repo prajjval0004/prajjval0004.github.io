@@ -253,7 +253,7 @@ a {
   color: var(--muted);
 }
 
-.section-text p + p {
+.section-text p+p {
   margin-top: 16px;
 }
 
@@ -437,6 +437,7 @@ a {
     padding-top: 55px;
   }
 }
+
 .experience-list {
   margin-top: 16px;
   padding-left: 20px;
@@ -446,6 +447,7 @@ a {
 .experience-list li {
   margin-bottom: 12px;
 }
+
 .date-badge {
   display: inline-block;
   background: #eff6ff;
@@ -506,6 +508,7 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
 .hero-highlights {
   display: flex;
   flex-wrap: wrap;
@@ -557,6 +560,7 @@ a {
   border-radius: 999px;
   margin-bottom: 16px;
 }
+
 .about-tags {
   display: flex;
   flex-wrap: wrap;
@@ -573,6 +577,7 @@ a {
   font-size: 14px;
   font-weight: 800;
 }
+
 .skills-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -619,6 +624,7 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
 .research-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -671,6 +677,7 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
 /* Navbar improvement */
 .navbar {
   max-width: 1280px;
@@ -722,6 +729,7 @@ a {
     text-align: center;
   }
 }
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -791,6 +799,7 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
 .workshop-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -837,6 +846,7 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
 .footer {
   background: #0f172a;
   color: white;
@@ -904,6 +914,7 @@ a {
 .footer-copy {
   font-size: 14px;
 }
+
 .back-to-top {
   position: fixed;
   right: 24px;
@@ -931,6 +942,7 @@ a {
 .back-to-top.show {
   display: grid;
 }
+
 /* Smooth reveal animation */
 .reveal {
   opacity: 0;
@@ -942,6 +954,7 @@ a {
   opacity: 1;
   transform: translateY(0);
 }
+
 /* Active navbar link */
 .nav-links a.current {
   color: var(--primary);
@@ -970,6 +983,7 @@ a {
   text-align: justify;
   text-justify: inter-word;
 }
+
 /* Publication numbering style */
 .publication-list {
   counter-reset: publication-counter;
@@ -1008,6 +1022,7 @@ a {
     top: 24px;
   }
 }
+
 .error-page {
   min-height: 100vh;
   display: grid;
@@ -1042,4 +1057,95 @@ a {
 
 .error-box .btn {
   gap: 8px;
+}
+
+/* Step 38: Premium visual polish */
+body {
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.10), transparent 32%),
+    radial-gradient(circle at top right, rgba(147, 197, 253, 0.18), transparent 28%),
+    var(--bg);
+}
+
+.hero {
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 28px 22px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.07), rgba(255, 255, 255, 0.35));
+  border-radius: 34px;
+  z-index: -1;
+}
+
+.hero h1 {
+  background: linear-gradient(135deg, #172033, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text {
+  font-size: 17px;
+  max-width: 620px;
+}
+
+.section:nth-of-type(even) {
+  background: rgba(255, 255, 255, 0.42);
+  border-radius: 32px;
+}
+
+.card,
+.project-card,
+.research-card,
+.skill-category,
+.publication,
+.workshop-card,
+.timeline-item,
+.contact-box {
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
+}
+
+.card:hover,
+.project-card:hover,
+.research-card:hover,
+.skill-category:hover,
+.publication:hover,
+.workshop-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.12);
+}
+
+.section-heading {
+  letter-spacing: -0.03em;
+}
+
+.center-title {
+  margin-bottom: 34px;
+}
+
+.card p,
+.project-card p,
+.research-card p,
+.workshop-card p,
+.publication p,
+.timeline-item p,
+.section-text p {
+  font-size: 15.5px;
+}
+
+.hero-highlights span,
+.about-tags span,
+.skill-tags span,
+.project-tags span,
+.tags span {
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.08);
+}
+
+@media (max-width: 900px) {
+  .hero::before {
+    inset: 18px 12px;
+  }
 }
