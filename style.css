@@ -1639,3 +1639,77 @@ body {
     animation: none;
   }
 }
+/* Step 44: Fix navbar spacing and crowding */
+
+.navbar {
+  max-width: 1320px;
+  gap: 34px;
+}
+
+.logo {
+  flex-shrink: 0;
+  margin-right: 24px;
+}
+
+.nav-links {
+  margin-left: auto;
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+.nav-links a {
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+/* Keep resume button slightly separated */
+.resume-btn {
+  margin-left: 6px;
+}
+
+/* Switch to hamburger earlier to avoid crowding */
+@media (max-width: 1400px) {
+  .menu-btn {
+    display: grid;
+    place-items: center;
+    height: 44px;
+    width: 44px;
+    border-radius: 14px;
+    background: white;
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 76px;
+    right: 22px;
+    width: min(340px, calc(100vw - 44px));
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(226, 232, 240, 0.95);
+    border-radius: 24px;
+    padding: 16px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    box-shadow: 0 24px 55px rgba(15, 23, 42, 0.14);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 11px 14px;
+    font-size: 15px;
+  }
+
+  .resume-btn {
+    margin-left: 0;
+    text-align: center;
+    justify-content: center !important;
+  }
+}
