@@ -437,3 +437,12 @@ a {
     padding-top: 55px;
   }
 }
+.experience-list {
+  margin-top: 16px;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.experience-list li {
+  margin-bottom: 12px;
+}
