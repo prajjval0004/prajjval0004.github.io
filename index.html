@@ -41,20 +41,39 @@
       <button class="menu-btn" id="menuBtn" aria-label="Open menu">
         <i class="fa-solid fa-bars"></i>
       </button>
-
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#research">Research Focus</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#internships">Internships</a></li>
-        <li><a href="#education">Education</a></li>
+
+        <li class="nav-dropdown">
+          <button class="dropdown-toggle" type="button">
+            Research <i class="fa-solid fa-chevron-down"></i>
+          </button>
+
+          <ul class="dropdown-menu">
+            <li><a href="#research">Research Focus</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-dropdown">
+          <button class="dropdown-toggle" type="button">
+            Academic <i class="fa-solid fa-chevron-down"></i>
+          </button>
+
+          <ul class="dropdown-menu">
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#internships">Internships</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#workshops">Workshops</a></li>
+          </ul>
+        </li>
+
         <li><a href="#publications">Publications</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#workshops">Workshops</a></li>
         <li><a href="#contact">Contact</a></li>
+
         <li>
           <a class="resume-btn" href="assets/Prajjval_cv_2026.pdf" target="_blank">
             Resume
