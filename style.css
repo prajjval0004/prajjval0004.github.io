@@ -557,3 +557,19 @@ a {
   border-radius: 999px;
   margin-bottom: 16px;
 }
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.about-tags span {
+  background: #eff6ff;
+  color: var(--primary);
+  border: 1px solid #dbeafe;
+  padding: 8px 13px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+}
